@@ -109,8 +109,10 @@ async function episode(data_id) {
 }
 
 export async function getmovie(id) {
+  
   let resp = await (await fetch(`https://vidsrc.to/embed/movie/${id}`)).text();
-  let data_id = (/data-id="(.*?)"/g).exec(resp)[1];
+  const match = (/data-id="(.*?)"/g).exec(resp);
+  let data_id = match[1];
   return episode(data_id);
 }
 
