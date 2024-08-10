@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
             movie: "/vidsrc/:movieTMDBid",
             show: "/vidsrc/:showTMDBid?s=seasonNumber&e=episodeNumber"
         },
-        author: "This api is developed and created by AijaZ"
+        author: "This api is developed and created by ajax"
     });
 });
 
